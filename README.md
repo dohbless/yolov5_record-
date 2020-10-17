@@ -35,3 +35,15 @@ sudo ldconfig
  tar -xzvf cudnn-10.1-linux-x64-v8.0.2.39.tgz
  https://blog.csdn.net/IT_zxl001/article/details/89350373#commentBox
  (据说cudnn版本8之后无法按原方式显示版本）
+ 
+ ## pip 安装pytorch
+ pip install torch==1.6.0+cu101 torchvision==0.7.0+cu101 -i  https://pypi.tuna.tsinghua.edu.cn/simple
+  pip install torch==1.6.0+cu101 torchvision==0.7.0+cu101 -i http://pypi.douban.com/simple/
+  
+  https://download.pytorch.org/whl/torch_stable.html
+  
+  pip --default-timeout=100 install torch torchvision -i  https://pypi.tuna.tsinghua.edu.cn/simple
+https://blog.csdn.net/qq_15192373/article/details/104244743 简单直白
+
+## realsense相机驱动安装
+
