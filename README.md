@@ -43,11 +43,25 @@ https://blog.csdn.net/mbytes/article/details/102901486?utm_medium=distribute.pc_
 - sudo gedit .bashrc 等
 - 再次卸载CUDNN
 - 再次安装CUDNN
+tar -xzvf cudnn-10.2-linux-x64-v8.0.3.33.tgz
+dohbless@dohbless-G3-3579:~/下载/cuda$ sudo cp lib64/lib* /usr/local/cuda/lib64/
 
-
+sudo chmod +r libcudnn.so.8.0.3
+sudo ln -sf libcudnn.so.8.0.3 libcudnn.so.8
+sudo ln -sf libcudnn.so.8 libcudnn.so     
+sudo ldconfig
+cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
 #### 开始重新安装10.2
 (这次是提前下好的.run文件啦)
- ## pip 安装pytorch
+#### 测试之前安好的pytorch
+lirui@lirui:~/下载$ python
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 18:10:19) 
+[GCC 7.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import torch
+>>> 
+木有报错嘻嘻
+## pip 安装pytorch
  pip install torch==1.6.0+cu101 torchvision==0.7.0+cu101 -i  https://pypi.tuna.tsinghua.edu.cn/simple
   pip install torch==1.6.0+cu101 torchvision==0.7.0+cu101 -i http://pypi.douban.com/simple/
   
