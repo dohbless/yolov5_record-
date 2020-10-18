@@ -4,7 +4,6 @@
 - cd /usr/local/cuda-10.0/bin/
 - sudo ./uninstall_cuda_10.0.pl
 - sudo rm -rf /usr/local/cuda-8.0/
-
 ## check 对应cuda版本
 - https://pytorch.org/
 ## 官网下载对应版本CUDA
@@ -36,6 +35,18 @@ sudo ldconfig
  https://blog.csdn.net/IT_zxl001/article/details/89350373#commentBox
  (据说cudnn版本8之后无法按原方式显示版本）
  
+ ### 所以为啥要卸载重安23333....就很气<>
+- https://blog.csdn.net/qq_38163755/article/details/88353898 (适合deb版本CUDA10.1)
+https://blog.csdn.net/mbytes/article/details/102901486?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.channel_param#cuda_75(run版本10.2)
+- chmod a+x cuda_10.2.89_440.33.01_linux.run
+- sudo sh cuda_10.2.89_440.33.01_linux.run
+- sudo gedit .bashrc 等
+- 再次卸载CUDNN
+- 再次安装CUDNN
+
+
+#### 开始重新安装10.2
+(这次是提前下好的.run文件啦)
  ## pip 安装pytorch
  pip install torch==1.6.0+cu101 torchvision==0.7.0+cu101 -i  https://pypi.tuna.tsinghua.edu.cn/simple
   pip install torch==1.6.0+cu101 torchvision==0.7.0+cu101 -i http://pypi.douban.com/simple/
@@ -48,7 +59,6 @@ https://blog.csdn.net/qq_15192373/article/details/104244743 简单直白
 ## realsense相机驱动安装
 
 ## ros系统安装
-
 - 第一个：sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 - 第二个：sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
 - 第三个：
