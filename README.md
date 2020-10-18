@@ -46,13 +46,15 @@ sudo ldconfig
 https://blog.csdn.net/qq_15192373/article/details/104244743 简单直白
 
 ## realsense相机驱动安装
+
 ## ros系统安装
-第一个：sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-第二个：sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
-第三个：
+
+- 第一个：sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+- 第二个：sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+- 第三个：
 sudo apt update
 sudo apt install ros-melodic-desktop-full
-第四个：
+- 第四个：
 sudo rosdep init
 rosdep update
 如果失败：#打开hosts文件
@@ -61,10 +63,10 @@ sudo gedit /etc/hosts
 151.101.84.133 raw.githubusercontent.com
 #保存后退出再尝试
 来自：https://blog.csdn.net/u013468614/article/details/102917569
-第五个：
+- 第五个：
 echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
-最后一个：
+- 最后一个：
 sudo apt install python-rosinstall python-rosinstall-generator python-wstool build-essential
 ### apt和dpkg区别
 - 两者的区别是dpkg绕过apt包管理数据库对软件包进行操作，所以你用dpkg安装过的软件包用apt可以再安装一遍，系统不知道之前安装过了，将会覆盖之前dpkg的安装。
