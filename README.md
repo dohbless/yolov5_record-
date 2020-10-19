@@ -96,3 +96,8 @@ sudo apt install python-rosinstall python-rosinstall-generator python-wstool bui
 - 两者的区别是dpkg绕过apt包管理数据库对软件包进行操作，所以你用dpkg安装过的软件包用apt可以再安装一遍，系统不知道之前安装过了，将会覆盖之前dpkg的安装。
 - 1、dpkg是用来安装.deb文件,但不会解决模块的依赖关系,且不会关心ubuntu的软件仓库内的软件,可以用于安装本地的deb文件。
 - 2、apt会解决和安装模块的依赖问题,并会咨询软件仓库, 但不会安装本地的deb文件, apt是建立在dpkg之上的软件管理工具。
+### ROS+python3+cv_brige
+- https://zhuanlan.zhihu.com/p/77682229
+- https://www.jianshu.com/p/2f86607c98d1
+- https://www.jianshu.com/go-wild?ac=2&url=https%3A%2F%2Fblog.csdn.net%2Flightnateriver%2Farticle%2Fdetails%2F97794261
+- https://www.it610.com/article/1279274013260005376.htm
