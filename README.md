@@ -10,7 +10,9 @@
 - https://developer.nvidia.com/cuda-10.1-download-archive-update2?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1804&target_type=deblocal
 - （实测deb版本最稳定）
 - 安装报错 https://blog.csdn.net/wanttifa/article/details/107548931
-- 配置环境变量 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-10.1/lib64
+-配置环境变量
+gedit ~/.bashrc
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-10.1/lib64
 export PATH=$PATH:/usr/local/cuda-10.1/bin
 export CUDA_HOME=/usr/local/cuda-10.1
 source ~/.bashrc更新
@@ -71,6 +73,8 @@ Type "help", "copyright", "credits" or "license" for more information.
 https://blog.csdn.net/qq_15192373/article/details/104244743 简单直白
 
 ## realsense相机驱动安装
+- shell执行命令
+-- realsense-viewer
 
 ## ros系统安装
 - 第一个：sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
@@ -101,3 +105,19 @@ sudo apt install python-rosinstall python-rosinstall-generator python-wstool bui
 - https://www.jianshu.com/p/2f86607c98d1
 - https://www.jianshu.com/go-wild?ac=2&url=https%3A%2F%2Fblog.csdn.net%2Flightnateriver%2Farticle%2Fdetails%2F97794261
 - https://www.it610.com/article/1279274013260005376.htm
+
+## tensorRt配置
+### 列一下版本号
+
+    Ubuntu 18.04
+    Cuda：10.2
+    Cudnn：8.0.3
+    TensorRT：7.1.3.4
+### 配置过程
+-  解压tar包
+    tar -zxvf  TensorRT-7.1.3.4.Ubuntu-18.04.x86_64-gnu.cuda-10.2.cudnn8.0.tar.gz
+- 环境变量设置
+    gedit ~/.bashrc
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/media/dohbless/R/TensorRT-7.1.3.4/lib
+    export TENSORRT_ROOT=/media/dohbless/R/TensorRT-7.1.3.4
+    source ~/.bashrc
