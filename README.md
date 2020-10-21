@@ -114,6 +114,7 @@ sudo apt install python-rosinstall python-rosinstall-generator python-wstool bui
     Cudnn：8.0.3
     TensorRT：7.1.3.4
 ### 配置过程
+（https://blog.csdn.net/qq_19707521/article/details/105413411?utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduend~default-1-105413411.nonecase&utm_term=ubuntu%20%E9%85%8D%E7%BD%AEtensorrt%E7%8E%AF%E5%A2%83&spm=1000.2123.3001.4430）
 -  解压tar包
     tar -zxvf  TensorRT-7.1.3.4.Ubuntu-18.04.x86_64-gnu.cuda-10.2.cudnn8.0.tar.gz
 - 环境变量设置
@@ -121,3 +122,13 @@ sudo apt install python-rosinstall python-rosinstall-generator python-wstool bui
     export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/media/dohbless/R/TensorRT-7.1.3.4/lib
     export TENSORRT_ROOT=/media/dohbless/R/TensorRT-7.1.3.4
     source ~/.bashrc
+- 安装TensorRT的python接口
+    cd TensorRT-7.x.x.x/python
+    pip install tensorrt-7.1.3.4-cp36-none-linux_x86_64.whl
+ - 安装UFF（Tensorflow所使用的）
+    cd TensorRT-7.x.x.x/uff
+    pip install uff-0.6.9-py2.py3-none-any.whl
+ - 安装graphsurgeon
+    cd TensorRT-7.x.x.x/graphsurgeon
+    pip install graphsurgeon-0.4.1-py2.py3-none-any.whl
+    (https://blog.csdn.net/zong596568821xp/article/details/86077553?utm_medium=distribute.pc_relevant.none-task-blog-utm_term-7&spm=1001.2101.3001.4242)
