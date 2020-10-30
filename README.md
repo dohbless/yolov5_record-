@@ -141,8 +141,11 @@ sudo apt install python-rosinstall python-rosinstall-generator python-wstool bui
     cd ..
     catkin_make
     source devel/setup.bash
-
-
+## 在ROS使用RealSense SR300相机
+    - https://github.com/IntelRealSense/realsense-ros
+    export ROS_VER=melodic 
+    sudo apt-get install ros-$ROS_VER-realsense2-camera
+    sudo apt-get install ros-$ROS_VER-realsense2-description
 
 ## tensorRt配置
 ### 列一下版本号
