@@ -105,6 +105,26 @@ sudo apt install python-rosinstall python-rosinstall-generator python-wstool bui
 - https://www.jianshu.com/p/2f86607c98d1
 - https://www.jianshu.com/go-wild?ac=2&url=https%3A%2F%2Fblog.csdn.net%2Flightnateriver%2Farticle%2Fdetails%2F97794261
 - https://www.it610.com/article/1279274013260005376.htm
+### 出现错误ModuleNotFoundError: No module named 'defusedxml'
+- sudo ln -s /usr/bin/python2.7 /usr/bin/python
+- https://blog.csdn.net/wangguchao/article/details/82151372
+- https://blog.csdn.net/java0fu/article/details/106081845?utm_medium=distribute.pc_relevant.none-task-blog-title-3&spm=1001.2101.3001.4242
+### 启动ros节点(ctrl+alt+t打开终端 /rosrun运行节点)
+    roscore
+    rosrun turtlesim turtlesim_node
+    rosrun turtlesim turtle_teleop_key
+### ros学习(tab补全）
+    https://blog.csdn.net/weixinhum/article/details/83026236
+    rqt_graph
+    rosnode list    rosnode info /turtlesim    
+    rostopic list
+    rostopic pub /turtel/cmd_vel
+    - rostopic pub -r 10 /turtle1/cmd_vel geometry_msgs/Twist  "linear  （话题相关）
+    - rosservice ....(服务相关)
+    - rosbag 记录话题工具
+       rosbag record -a -O cmd_record
+       rosbag play ....
+
 
 ## tensorRt配置
 ### 列一下版本号
