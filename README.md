@@ -124,6 +124,24 @@ sudo apt install python-rosinstall python-rosinstall-generator python-wstool bui
     - rosbag 记录话题工具
        rosbag record -a -O cmd_record
        rosbag play ....
+### ros创建工作空间和工作包
+    mkdir catkin_ws
+    cd catkin_ws/
+    mkdir src
+    cd src/
+    catkin_init_workspace
+    (编译)
+    cd ..
+    catkin_make
+    catkin_make install
+    (创建工作包)
+    cd src/
+    catkin_create_pkg test_pkg std_msgs rospy roscpp
+    (编译工作包)
+    cd ..
+    catkin_make
+    source devel/setup.bash
+
 
 
 ## tensorRt配置
