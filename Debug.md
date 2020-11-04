@@ -31,3 +31,9 @@ sudo cp -v /home/dohbless/.local/share/Trash/files/cuda.2/include/cudnn_backend.
 找不到连接
 https://www.cnblogs.com/feifanrensheng/p/10039959.html
 sudo cp /usr/local/cuda-10.2/targets/x86_64-linux/lib/libcudart.so  /usr/local/lib/
+注册环境变量
+source devel/setup.bash
+使用roslaunch
+roslaunch main pro
+
+
