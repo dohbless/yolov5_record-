@@ -138,6 +138,11 @@
     cd ..
     catkin_make
     source devel/setup.bash
+### ros编译.zip工作包
+    unzip 2020RC-main.zip
+    https://blog.csdn.net/weixinhum/article/details/83026236
+    source ~/RC_record/ROS/devel/setup.bash
+    roslaunch main program.launch
 ## 在ROS使用RealSense SR300相机
     - https://github.com/IntelRealSense/realsense-ros
     export ROS_VER=melodic 
