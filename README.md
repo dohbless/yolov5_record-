@@ -46,13 +46,22 @@
      - 再次卸载CUDNN
      - 再次安装CUDNN
      tar -xzvf cudnn-10.2-linux-x64-v8.0.3.33.tgz
+     https://blog.csdn.net/wanzhen4330/article/details/81704474
      dohbless@dohbless-G3-3579:~/下载/cuda$ sudo cp lib64/lib* /usr/local/cuda/lib64/
-
+    (不完整展示)
      sudo chmod +r libcudnn.so.8.0.3
      sudo ln -sf libcudnn.so.8.0.3 libcudnn.so.8
      sudo ln -sf libcudnn.so.8 libcudnn.so     
      sudo ldconfig
      cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
+### 不小心删除了...再次重安
+    - 先卸载
+     sudo /usr/local/cuda-10.2/bin/cuda-uninstaller
+     
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-10.2/lib64
+    export PATH=$PATH:/usr/local/cuda-10.2/bin
+    export CUDA_HOME=/usr/local/cuda-10.2
+     
 #### 开始重新安装10.2
 (这次是提前下好的.run文件啦)
 #### 测试之前安好的pytorch
@@ -142,6 +151,7 @@
     unzip 2020RC-main.zip
     https://blog.csdn.net/weixinhum/article/details/83026236
     source ~/RC_record/ROS/devel/setup.bash
+    source devel/setup.bash
     roslaunch main program.launch
 ## 在ROS使用RealSense SR300相机
     - https://github.com/IntelRealSense/realsense-ros
