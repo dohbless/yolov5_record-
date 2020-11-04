@@ -12,6 +12,7 @@
  locate opencv.pc
  /usr/lib/x86_64-linux-gnu/pkgconfig/opencv.pc
  
-  sudo vim /etc/profile.d/pkgconfig.sh
+  export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig/:$PKG_CONFIG_PATH
+
 
 
