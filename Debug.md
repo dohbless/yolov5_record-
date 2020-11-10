@@ -36,4 +36,8 @@ source devel/setup.bash
 使用roslaunch
 roslaunch main pro
 
+包含动态连接库
+sudo cp -v /home/dohbless/.local/share/Trash/files/TensorRT-7.1.3.4/targets/x86_64-linux-gnu/lib/libmyelin.so.1 /usr/local/lib/
+
+
 
