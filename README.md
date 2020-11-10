@@ -159,6 +159,28 @@
     sudo apt-get install ros-$ROS_VER-realsense2-camera
     sudo apt-get install ros-$ROS_VER-realsense2-description
 
+## vscode下配置开发ROS项目
+    - https://blog.csdn.net/weixin_35695879/article/details/85254422
+    - 640*480
+    - 49
+    - x
+## .pt转engine
+    将解释器指向ppython3
+    dohbless@dohbless-G3-3579:~$ echo alias python=python3 >> ~/.bashrc
+    dohbless@dohbless-G3-3579:~$ source ~/.bashrc
+    dohbless@dohbless-G3-3579:~$ python --version
+    Python 3.6.9
+    https://github.com/wang-xinyu/tensorrtx/tree/master/yolov5
+    将best.pt放到yolov5/weights下，并修改为yolov5x.wits
+    报错No module named 'tqdm'
+    sudo easy_install pip
+    pip install tqdm
+    
+    sudo ./yolov5 -x
+    报错找不到动态链接库
+    error while loading shared libraries: libmyelin.so.1: cannot open shared object file: No such file or directory
+    find / -name libmyelin.so.1
+
 ## tensorRt配置
 ### 列一下版本号
 
