@@ -180,6 +180,10 @@
     报错找不到动态链接库
     error while loading shared libraries: libmyelin.so.1: cannot open shared object file: No such file or directory
     find / -name libmyelin.so.1
+    报错CUDA初始化错误，然后测试发现torch.cuda.is_available(） 是False
+    说是cuda toolkit版本号 和 显卡驱动对应不上
+    https://lawson-t.blog.csdn.net/article/details/105163179?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.channel_param
+
 
 ## tensorRt配置
 ### 列一下版本号
