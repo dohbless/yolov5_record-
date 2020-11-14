@@ -153,6 +153,9 @@
     cd ..
     catkin_make
     source devel/setup.bash
+    (报错)(make: *** 没有规则可以创建“/usr/lib/x86_64-linux-gnu/libGL.so”需要的目标“XXX”）
+     sudo ln -s /usr/lib/x86_64-linux-gnu/libGL.so.1.0.0 /usr/lib/x86_64-linux-gnu/libGL.so
+
 ### ros编译.zip工作包
     unzip 2020RC-main.zip
     https://blog.csdn.net/weixinhum/article/details/83026236
