@@ -3,6 +3,9 @@
 ## 驱动版本过低重新安装23333（11.14）
      - https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html（官网查对应驱动版本）
      - 在软件更新里直接安装450版
+     - 果然....开始报错NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+     - 前面加个sudo即可？？？
+
 ## unload original CUDA 10.0
     - cd /usr/local/cuda-10.0/bin/
     - sudo ./uninstall_cuda_10.0.pl
